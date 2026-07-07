@@ -1,10 +1,8 @@
 # Retail Banking Transaction Analytics Platform
 
-**Author:** [Your Name] | [LinkedIn](#) | [Email](#)
+**Author:** Ankit Singh Negi | [LinkedIn](#) | [Email](#)
 
 A end-to-end data & analytics project simulating the work of a **Data & Analytics Analyst** in a retail banking environment: capturing business requirements, building a Snowflake data model, integrating a live API, enforcing data quality, and delivering self-service analytical outputs to business stakeholders.
-
-> **Why this project:** built specifically to demonstrate the skills in a Data & Analytics Analyst (Associate) job description — business requirement documentation, Snowflake (warehouses/stages/data sharing), Python (Pandas/NumPy/Requests), Agile delivery, API integration, and data quality assurance.
 
 ## Business Problem
 
@@ -35,18 +33,7 @@ banking_analytics_project/
 └── EXECUTIVE_SUMMARY.md              # 1-page stakeholder summary
 ```
 
-## How This Maps to the Job Description
 
-| JD Requirement | Where it's demonstrated |
-|---|---|
-| Capture, validate, document business/data requirements | `business_requirements/BRD.md`, `traceability_matrix.csv` |
-| Snowflake: data modelling, querying, warehouses, stages, data sharing | `snowflake/01_data_model.sql` – `04_data_sharing_example.sql` |
-| Python: Pandas, NumPy, Requests | `python/etl_pipeline.py`, `python/api_integration.py` |
-| API knowledge / data integration | `python/api_integration.py` — live FX rate API with retry logic |
-| Agile working | `business_requirements/user_stories_backlog.md` — epics, stories, sprints |
-| Data quality assurance | `python/data_quality_checks.py`, `data/data_quality_log.csv` |
-| Interrogate/interpret/visualise data | `snowflake/03_analysis_queries.sql`, `python/create_visuals.py` |
-| Traceability of requirements to outputs | `business_requirements/traceability_matrix.csv` |
 
 ## Approach
 
@@ -100,6 +87,6 @@ python create_visuals.py              # charts
 
 This project uses **synthetic data**, generated to realistically mirror a retail banking transaction extract (structure, volume, and the kinds of data quality issues a real core-banking feed produces). No real customer data is used anywhere in this project.
 
-## Resume-Ready Summary
+##  Summary
 
 > Built an end-to-end banking transaction analytics platform: authored business requirements and Agile backlog, designed a Snowflake star schema, integrated a live FX rate API in Python (Pandas/NumPy/Requests), built a data quality framework achieving a 94.9% clean-data pass rate on 12,000+ transactions, and delivered secure, role-based self-service views for cross-team stakeholder use.
