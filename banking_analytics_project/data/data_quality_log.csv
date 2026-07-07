@@ -1,0 +1,8 @@
+check,rows_affected,action_taken,severity
+Duplicate transaction_id,360,"Kept first occurrence, dropped remainder",Medium
+Missing customer_id,116,Excluded from customer-level analysis; retained in raw audit table,High
+Invalid or future-dated transaction_date,58,Excluded pending source system correction,High
+Negative transaction amount (non-refund context),59,Flagged and excluded - to be reviewed with source system owner to confirm if these are legitimate refunds mis-tagged as purchases,Medium
+Missing currency code / failed FX conversion,250,Excluded from GBP-denominated analysis; raw record retained,Medium
+category_id not found in category dimension,0,Excluded pending dimension update,Low
+TOTAL,843,11517/12360 rows passed all checks (93.2% pass rate),Summary

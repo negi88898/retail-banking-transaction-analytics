@@ -1,0 +1,8 @@
+Requirement_ID,Requirement_Summary,User_Story,Data_Source,Transformation_Script,Snowflake_Object,Validation_Method,Status
+REQ-01,Consolidate data into single model,US-01/US-02/US-03,"raw_customers.csv, raw_transactions.csv, raw_categories.csv",etl_pipeline.py,"FACT_TRANSACTIONS, DIM_CUSTOMER, DIM_CATEGORY, DIM_DATE",Row count reconciliation vs source,Complete
+REQ-02,Standardise currency to GBP,US-04/US-05,Frankfurter FX API,api_integration.py,FACT_TRANSACTIONS.amount_gbp,Manual spot-check of 10 converted transactions vs published FX rate,Complete
+REQ-03,Log data quality issues,US-06/US-07,raw_transactions.csv,data_quality_checks.py,data_quality_log.csv,Row-level exclusion count matches log total,Complete
+REQ-04,Category and channel spend analysis,US-08,FACT_TRANSACTIONS + DIM_CATEGORY,03_analysis_queries.sql,VW_SPEND_BY_CATEGORY_CHANNEL,Cross-checked against source CSV pivot table,Complete
+REQ-05,Self-service business-friendly views,US-08/US-09,FACT_TRANSACTIONS,03_analysis_queries.sql,"VW_CUSTOMER_SEGMENTS, VW_MONTHLY_TRENDS",Stakeholder walkthrough sign-off,Complete
+REQ-06,Secure read-only data sharing,US-10,FACT_TRANSACTIONS (aggregated),04_data_sharing_example.sql,VW_PRODUCT_TEAM_SECURE_SHARE,Confirmed underlying PII columns not exposed,Complete
+REQ-07,Re-runnable pipeline,US-02/US-06,All raw sources,"generate_synthetic_data.py, etl_pipeline.py",N/A,Re-ran pipeline twice; output row counts identical,Complete
