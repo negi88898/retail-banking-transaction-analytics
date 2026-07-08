@@ -1,7 +1,7 @@
 # Executive Summary: Retail Banking Transaction Analytics Platform
 
 **To:** Head of Customer Insights
-**From:** [Your Name], Data & Analytics Analyst
+**From:** Ankit Singh Negi, Data & Analytics Analyst
 **Re:** Delivery of trusted transaction data model and initial findings
 
 ## What Was Delivered
